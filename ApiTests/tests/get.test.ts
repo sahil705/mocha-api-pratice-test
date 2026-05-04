@@ -1,5 +1,6 @@
-const axios = require("axios");
-const { expect } = require("chai");
+import axios from "axios"
+import { expect } from "chai"
+import { describe, it } from "mocha" 
 
 // ✅ Make sure baseURL is complete with https://
 const api = axios.create({
@@ -19,9 +20,7 @@ describe("User Api Test", () => {
       expect(res.status).to.equal(200);
       expect(res.data.data).to.be.an("array");
     } catch (error) {
-      console.log("ERROR:", error.message);
-      console.log("ERROR URL:", error.config?.url);
-      console.log("ERROR baseURL:", error.config?.baseURL);
+      console.log("ERROR:", error instanceof Error ? error.message : String(error)); 
       throw error;
     }
   });
@@ -36,7 +35,7 @@ describe("User Api Test", () => {
       expect(res.status).to.equal(201);
       expect(res.data).to.have.property("id");
     } catch (error) {
-      console.log("ERROR:", error.message);
+      console.log("ERROR:", error instanceof Error ? error.message : String(error));
       throw error;
     }
   });

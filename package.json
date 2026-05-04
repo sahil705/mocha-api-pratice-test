@@ -2,10 +2,13 @@
   "name": "api-automation",
   "version": "1.0.0",
   "main": "index.js",
+
+  
   "scripts": {
-  "test": "mocha --recursive tests praticejs/ --timeout 10000 --exit",
-  "test:report": "mocha --recursive tests/**/*.js --timeout 10000 --reporter mochawesome"
+    "test": "mocha"
 },
+
+
   "keywords": [],
   "author": "",
   "license": "ISC",

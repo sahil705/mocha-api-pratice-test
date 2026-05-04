@@ -1,0 +1,7 @@
+{
+ "require": ["ts-node/register"],
+ "extension": ["ts"],
+ "spec": "ApiTests/**/*.ts",
+ "timeout": 10000,
+ "exit": true
+}

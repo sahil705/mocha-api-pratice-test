@@ -1,5 +1,5 @@
-const axios = require("axios");
-const { expect } = require("chai");
+import axios from "axios";
+import { expect } from "chai"
 
 describe("Suite: Get Pet by ID", () => {
     try {
